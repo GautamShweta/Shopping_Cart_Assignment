@@ -4,7 +4,7 @@ $(() => {
   $("#addProducts").click(()=>{
     
     
-    window.location=window.location.href()+"/products.html"
+    window.location=window.location.href+"/products.html"
   })
   $("#userLogin").click(()=>{
     
