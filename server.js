@@ -21,6 +21,8 @@ app.use('/products',product.route);
 app.use('/users',user.route);
 app.use('/cartItems',cart.route);
 
+const PORT=process.env.PORT || 8989 ;
+
 db.sync().then(()=>{
-  app.listen(8989)
+  app.listen(PORT,()=>console.log(`started at localhost:http://localhost:${PORT}`));
 })

@@ -2,8 +2,13 @@
 
 $(() => {
   $("#addProducts").click(()=>{
-    console.log("reached");
-    window.location="http://localhost:8989/products.html";
+    
+    
+    window.location="http://localhost:8989/products.html"
+  })
+  $("#userLogin").click(()=>{
+    
+    window.location="http://localhost:8989/userHome.html";
 
   })
 
