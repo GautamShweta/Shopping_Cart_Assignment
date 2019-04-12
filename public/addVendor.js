@@ -8,7 +8,7 @@ $(() => {
   })
   $("#userLogin").click(()=>{
     
-    window.location="http://localhost:8989/userHome.html";
+    window.location=window.location.href+"/userHome.html";
 
   })
 

@@ -88,7 +88,7 @@ $(() => {
                     viewCartBtn.setAttribute("class", " btn btn-primary");
                     viewCartBtn.addEventListener("click", () => {
                         
-                        window.location = "http://localhost:8989//cart.html";
+                        window.location = window.location.href+"/cart.html";
                     })
                 
                     body.appendChild(viewCartBtn);
