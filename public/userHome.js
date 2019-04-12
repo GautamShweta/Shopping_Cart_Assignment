@@ -6,18 +6,21 @@ $(() => {
     // })
 
     /****************************userLogin click*****************************/
+    let flag = false;
     $('#userLogin').click(() => {
 
         let name = $('#userName').val();
         let user = undefined;
-        let flag = false;
+        
         $.get(`/users/${name}`, (data) => {
             if (data.length === 0) {
 
                 alert("User Do not Exists")
             }
             else {
+                
                 user = data;
+                
                 window.localStorage.setItem('userId', user[0].id);
                 $.get("/products", (data) => {
 
@@ -76,6 +79,8 @@ $(() => {
                         list.appendChild(main);
 
                     }
+                    if(!flag)
+                    {
                     let viewCartBtn = document.createElement("input");
                     let body=document.querySelector("#body");
                     viewCartBtn.setAttribute("value","View Cart");
@@ -85,8 +90,10 @@ $(() => {
                         
                         window.location = "http://localhost:8989//cart.html";
                     })
-                    
+                
                     body.appendChild(viewCartBtn);
+                }
+                flag=true;
                 })
 
             }
