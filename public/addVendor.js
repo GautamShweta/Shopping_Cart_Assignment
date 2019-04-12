@@ -39,7 +39,7 @@ $(() => {
               type: 'DELETE',
               data:{id:vendor.id},
               success: function(result) {
-                console.log("done");
+                refreshList();
                 event.target.parentElement.remove();
               }
               
